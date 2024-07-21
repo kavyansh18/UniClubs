@@ -15,14 +15,14 @@ export const Lamp = ({
   return (
     <div
       className={cn(
-        "relative flex h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0 pt-24",
+        "relative flex h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0 lg:pt-24",
         className
       )}
     >
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 h-screen">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
-          whileInView={{ opacity: 1, width: "38rem" }}
+          whileInView={{ opacity: 1, width: "30rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -38,7 +38,7 @@ export const Lamp = ({
         </motion.div>
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
-          whileInView={{ opacity: 1, width: "38rem" }}
+          whileInView={{ opacity: 1, width: "30rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -67,7 +67,7 @@ export const Lamp = ({
         ></motion.div>
         <motion.div
           initial={{ width: "15rem" }}
-          whileInView={{ width: "38rem" }}
+          whileInView={{ width: "30rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -86,7 +86,7 @@ export const Lamp = ({
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-            className="w-full absolute top-[18rem] right-0 flex justify-center items-center"
+            className="w-full absolute lg:top-[18rem] right-0 flex justify-center items-center mt-20 lg:mt-0"
           >
             <div className="text-white text-[15px] hover:text-cyan-400 transition-colors duration-300 ease-in-out">
               Let's find perfect club for you in SRM

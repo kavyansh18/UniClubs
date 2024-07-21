@@ -19,14 +19,14 @@ export default function HomePg() {
           initial={{ opacity: 0, y: -70 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
-          className="flex justify-center items-center absolute bottom-[11rem] left-[8rem]"
+          className="flex justify-center items-center absolute lg:bottom-[11rem] lg:left-[8rem] bottom-[24rem] left-[8rem]"
         >
           <img className="w-24" src={logouc} alt="Logo" />
         </motion.div>
-        <p className="py-1 bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent text-center text-4xl font-medium tracking-tight  md:text-6xl">
+        <p className="py-1 bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent text-center text-6xl font-medium tracking-tight  lg:text-6xl lg:relative absolute lg:bottom-0 bottom-[16rem] lg:left-0 left-[4.3rem]">
           UniClubs
         </p>
-        <p className="bg-gradient-to-br from-slate-300 to-slate-500 py-1 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-4xl">
+        <p className="bg-gradient-to-br from-slate-300 to-slate-500 py-1 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-4xl mb-16 lg:relative">
           Discover, Connect, Excel
         </p>
       </motion.h1>
