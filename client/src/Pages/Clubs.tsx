@@ -29,58 +29,122 @@ export default function Clubs() {
 }
 
 export const projects = [
-  {
-    title: "NextTech Lab",
-    description:
-      "A technology company that builds economic infrastructure for the internet.",
-    image: ntl, 
-  },
-  {
-    title: "The Product House X SRMIST",
-    description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime.",
-    image: tph,
-  },
-  {
-    title: "BlockChain Club",
-    description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    image: bc, 
-  },
-  {
-    title: "Google Developers Club",
-    description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    image: gdsc,
-  },
-  {
-    title: "HackTheBox",
-    description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    image: htb, 
-  },
-  {
-    title: "SRMKZILLA",
-    description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software.",
-    image: kzilla, 
-  },
-  {
-    title: "Newton School Coding Club",
-    description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software.",
-    image: nscc, 
-  },
-  {
-    title: "GitHub Community",
-    description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software.",
-    image: gh, 
-  },
-  {
-    title: "DBug Labs",
-    description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software.",
-    image: dbug, 
-  },
-];
+    {
+      title: "NextTech Lab",
+      description:
+        "⁠The Next Tech Lab pioneers advancements in AI, Cryptography, IoT, Blockchain, and Extended Reality. We foster collaboration to develop transformative solutions like AI-driven automation, secure cryptographic techniques, interconnected IoT systems, transparent blockchain transactions, and immersive XR experiences, driving technological progress and innovation.",
+      image: ntl,
+      type: "Technology Research Lab",
+      website: "https://nexttechlab.org",
+      socialLinks: [
+        { platform: "Instagram", link: "https://instagram.com/nexttechlab" },
+        { platform: "Twitter", link: "https://twitter.com/nexttechlab" },
+        { platform: "LinkedIn", link: "https://linkedin.com/company/nexttechlab" },
+      ],
+    },
+    {
+      title: "TPH X SRMIST",
+      description:
+        "A streaming service that offers a wide variety of award-winning TV shows, movies, anime.",
+      image: tph,
+      type: "Media Club",
+      website: "https://theproducthouse.com",
+      socialLinks: [
+        { platform: "Instagram", link: "https://instagram.com/theproducthouse" },
+        { platform: "Twitter", link: "https://twitter.com/theproducthouse" },
+        { platform: "LinkedIn", link: "https://linkedin.com/company/theproducthouse" },
+      ],
+    },
+    {
+      title: "BlockChain Club",
+      description:
+        "A multinational technology company that specializes in Internet-related services and products.",
+      image: bc,
+      type: "Finance Club",
+      website: "https://blockchainclub.org",
+      socialLinks: [
+        { platform: "Instagram", link: "https://instagram.com/blockchainclub" },
+        { platform: "Twitter", link: "https://twitter.com/blockchainclub" },
+        { platform: "LinkedIn", link: "https://linkedin.com/company/blockchainclub" },
+      ],
+    },
+    {
+      title: "Google Developers Club",
+      description:
+        "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
+      image: gdsc,
+      type: "Technology Club",
+      website: "https://developers.google.com",
+      socialLinks: [
+        { platform: "Instagram", link: "https://instagram.com/googledevs" },
+        { platform: "Twitter", link: "https://twitter.com/googledevs" },
+        { platform: "LinkedIn", link: "https://linkedin.com/company/googledevs" },
+      ],
+    },
+    {
+      title: "HackTheBox",
+      description:
+        "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
+      image: htb,
+      type: "Technology Club",
+      website: "https://hackthebox.com",
+      socialLinks: [
+        { platform: "Instagram", link: "https://instagram.com/hackthebox" },
+        { platform: "Twitter", link: "https://twitter.com/hackthebox" },
+        { platform: "LinkedIn", link: "https://linkedin.com/company/hackthebox" },
+      ],
+    },
+    {
+      title: "SRMKZILLA",
+      description:
+        "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software.",
+      image: kzilla,
+      type: "Technology Club",
+      website: "https://srmkzilla.net",
+      socialLinks: [
+        { platform: "Instagram", link: "https://instagram.com/srmkzilla" },
+        { platform: "Twitter", link: "https://twitter.com/srmkzilla" },
+        { platform: "LinkedIn", link: "https://linkedin.com/company/srmkzilla" },
+      ],
+    },
+    {
+      title: "Newton School Coding Club",
+      description:
+        "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software.",
+      image: nscc,
+      type: "Coding Club",
+      website: "https://newtonschool.co",
+      socialLinks: [
+        { platform: "Instagram", link: "https://instagram.com/newtonschool" },
+        { platform: "Twitter", link: "https://twitter.com/newtonschool" },
+        { platform: "LinkedIn", link: "https://linkedin.com/company/newtonschool" },
+      ],
+    },
+    {
+      title: "GitHub Community",
+      description:
+        "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software.",
+      image: gh,
+      type: "Technology Club",
+      website: "https://github.com",
+      socialLinks: [
+        { platform: "Instagram", link: "https://instagram.com/github" },
+        { platform: "Twitter", link: "https://twitter.com/github" },
+        { platform: "LinkedIn", link: "https://linkedin.com/company/github" },
+      ],
+    },
+    {
+      title: "DBug Labs",
+      description:
+        "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software.",
+      image: dbug,
+      type: "Technology Club",
+      website: "https://dbuglabs.com",
+      socialLinks: [
+        { platform: "Instagram", link: "https://instagram.com/dbuglabs" },
+        { platform: "Twitter", link: "https://twitter.com/dbuglabs" },
+        { platform: "LinkedIn", link: "https://linkedin.com/company/dbuglabs" },
+      ],
+    },
+  ];
+  

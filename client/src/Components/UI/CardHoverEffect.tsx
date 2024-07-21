@@ -10,7 +10,10 @@ export const HoverEffect = ({
   items: {
     title: string;
     description: string;
-    image: string; 
+    image: string;
+    type: string;
+    website: string;
+    socialLinks: { platform: string; link: string }[];
   }[];
   className?: string;
 }) => {
@@ -19,9 +22,19 @@ export const HoverEffect = ({
     title: string;
     description: string;
     image: string;
+    type: string;
+    website: string;
+    socialLinks: { platform: string; link: string }[];
   } | null>(null);
 
-  const handleOpenModal = (item: { title: string; description: string; image: string }) => {
+  const handleOpenModal = (item: {
+    title: string;
+    description: string;
+    image: string;
+    type: string;
+    website: string;
+    socialLinks: { platform: string; link: string }[];
+  }) => {
     setSelectedItem(item);
   };
 
@@ -33,11 +46,11 @@ export const HoverEffect = ({
     <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10", className)}>
       {items.map((item, idx) => (
         <div
-          key={item.title} // Changed from link to title
+          key={item.title}
           className="relative group block p-2 h-full w-full cursor-pointer"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
-          onClick={() => handleOpenModal({ title: item.title, description: item.description, image: item.image })}
+          onClick={() => handleOpenModal(item)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
@@ -58,7 +71,7 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card image={item.image}>
             <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <CardDescription>{item.type}</CardDescription>
           </Card>
         </div>
       ))}
@@ -69,6 +82,9 @@ export const HoverEffect = ({
           title={selectedItem.title}
           description={selectedItem.description}
           image={selectedItem.image}
+          type={selectedItem.type}
+          website={selectedItem.website}
+          socialLinks={selectedItem.socialLinks}
         />
       )}
     </div>
@@ -83,13 +99,13 @@ export const Card = ({
 }: {
   className?: string;
   children: React.ReactNode;
-  image: string; 
+  image: string;
   onClick?: () => void;
 }) => {
   return (
     <div
       className={cn(
-        "rounded-2xl h-[20rem] w-[20rem] p-4 overflow-hidden bg-sky-950 border border-transparent dark:border-white/[0.2] group-hover:border-slate-800 relative z-20 flex flex-col justify-center items-center",
+        "rounded-2xl h-[18rem] w-[18rem] p-4 overflow-hidden bg-sky-950 border border-transparent dark:border-white/[0.2] group-hover:border-slate-800 relative z-20 flex flex-col justify-center items-center",
         className
       )}
       onClick={onClick}
