@@ -1,6 +1,7 @@
 import { cn } from "../../Lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { Modal } from "../Modal.tsx";
 
 export const HoverEffect = ({
   items,
@@ -9,27 +10,34 @@ export const HoverEffect = ({
   items: {
     title: string;
     description: string;
-    link: string;
     image: string; 
   }[];
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [selectedItem, setSelectedItem] = useState<{
+    title: string;
+    description: string;
+    image: string;
+  } | null>(null);
+
+  const handleOpenModal = (item: { title: string; description: string; image: string }) => {
+    setSelectedItem(item);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedItem(null);
+  };
 
   return (
-    <div
-      className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10",
-        className
-      )}
-    >
+    <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10", className)}>
       {items.map((item, idx) => (
-        <a
-          href={item?.link}
-          key={item?.link}
-          className="relative group block p-2 h-full w-full"
+        <div
+          key={item.title} // Changed from link to title
+          className="relative group block p-2 h-full w-full cursor-pointer"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
+          onClick={() => handleOpenModal({ title: item.title, description: item.description, image: item.image })}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
@@ -52,8 +60,17 @@ export const HoverEffect = ({
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
-        </a>
+        </div>
       ))}
+      {selectedItem && (
+        <Modal
+          isOpen={!!selectedItem}
+          onClose={handleCloseModal}
+          title={selectedItem.title}
+          description={selectedItem.description}
+          image={selectedItem.image}
+        />
+      )}
     </div>
   );
 };
@@ -62,10 +79,12 @@ export const Card = ({
   className,
   children,
   image,
+  onClick,
 }: {
   className?: string;
   children: React.ReactNode;
   image: string; 
+  onClick?: () => void;
 }) => {
   return (
     <div
@@ -73,6 +92,7 @@ export const Card = ({
         "rounded-2xl h-[20rem] w-[20rem] p-4 overflow-hidden bg-sky-950 border border-transparent dark:border-white/[0.2] group-hover:border-slate-800 relative z-20 flex flex-col justify-center items-center",
         className
       )}
+      onClick={onClick}
     >
       <img src={image} alt="Card Image" className="w-32 object-cover rounded-t-2xl" />
       <div className="relative z-50">
