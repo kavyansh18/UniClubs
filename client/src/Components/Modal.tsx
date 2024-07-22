@@ -108,13 +108,13 @@ export const Modal = ({
         <div className="relative mt-10">
           <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] rounded-full blur-3xl " />
           <div className="flex justify-center items-center">
-            <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 w-[45rem]  h-[24rem] overflow-hidden rounded-2xl ">
-              <div className="flex justify-center items-center gap-16">
+            <div className="relative shadow-xl bg-gray-900 border border-gray-800 lg:px-4 lg:py-8 px-1 py-3 lg:w-[45rem] lg:h-[24rem] w-[21rem] h-[30rem] overflow-hidden rounded-2xl ">
+              <div className="relative lg:flex justify-center items-center gap-16 lg:px-0 px-4">
                 <div>
                   <img
                     src={image}
                     alt={title}
-                    className="w-full h-32 object-cover rounded-t-2xl mb-4"
+                    className="lg:w-32 lg:h-32 h-20 w-20 object-cover rounded-t-2xl lg:mb-4 lg:px-0 px-2"
                   />
                 </div>
                 <div>
@@ -137,10 +137,10 @@ export const Modal = ({
                       />
                     </svg>
                   </div>
-                  <h1 className="font-bold text-2xl text-white mb-2 relative z-50">
+                  <h1 className="font-bold text-2xl text-white mb-2 relative z-50 lg:px-0 px-2">
                     {title}
                   </h1>
-                  <h2 className="font-semibold text-m text-gray-300 mb-4 relative z-50">
+                  <h2 className="font-semibold text-m text-gray-300 mb-4 relative z-50 lg:px-0 px-2">
                     {type}
                   </h2>
                 </div>
@@ -148,7 +148,7 @@ export const Modal = ({
                   <div className="flex space-x-1">{renderSocialLinks()}</div>
                 </div>
               </div>
-              <p className="font-normal text-base text-slate-500 mb-4 relative z-50 px-5">
+              <p className="font-normal text-base text-slate-500 mb-4 relative z-50 px-5 lg:text-m text-sm">
                 {description}
               </p>
 
