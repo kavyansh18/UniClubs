@@ -19,7 +19,7 @@ export default function HomePg() {
           initial={{ opacity: 0, y: -70 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
-          className="flex justify-center items-center absolute lg:bottom-[11rem] lg:left-[8rem] bottom-[24rem] left-[8rem]"
+          className="flex justify-center items-center absolute lg:bottom-[11rem] lg:left-[8rem] bottom-[21rem] left-[8rem]"
         >
           <img className="w-24" src={logouc} alt="Logo" />
         </motion.div>
