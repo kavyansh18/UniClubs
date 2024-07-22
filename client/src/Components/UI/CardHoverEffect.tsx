@@ -111,7 +111,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-[18rem] w-[18rem] p-4 overflow-hidden bg-sky-950 border border-transparent dark:border-white/[0.2] group-hover:border-slate-800 relative z-20 flex flex-col justify-center items-center",
+        "rounded-2xl h-[17rem] w-[17rem] lg:h-[18rem] lg:w-[18rem] p-4 overflow-hidden bg-sky-950 border border-transparent dark:border-white/[0.2] group-hover:border-slate-800 relative z-20 flex flex-col justify-center items-center",
         className
       )}
       onClick={onClick}
