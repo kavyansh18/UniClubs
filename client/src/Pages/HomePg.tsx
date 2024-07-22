@@ -19,11 +19,11 @@ export default function HomePg() {
           initial={{ opacity: 0, y: -70 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
-          className="flex justify-center items-center absolute lg:bottom-[11rem] lg:left-[8rem] bottom-[21rem] left-[6.6rem]"
+          className="flex justify-center items-center absolute lg:bottom-[11rem] lg:left-[8rem] bottom-[21rem] left-[6.7rem]"
         >
           <img className="w-24" src={logouc} alt="Logo" />
         </motion.div>
-        <p className="py-1 bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent text-center text-6xl font-medium tracking-tight  md:text-6xl lg:relative absolute lg:bottom-0 bottom-[15rem] lg:left-0 left-[3.6rem]">
+        <p className="py-1 bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent text-center text-6xl font-medium tracking-tight  md:text-6xl lg:relative absolute lg:bottom-0 bottom-[14rem] lg:left-0 left-[3.6rem]">
           UniClubs
         </p>
         <p className="bg-gradient-to-br from-slate-300 to-slate-500 py-1 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-4xl lg:mb-0 mb-20">
