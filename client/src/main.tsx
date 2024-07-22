@@ -1,17 +1,21 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
-import HomePg from './Pages/HomePg.tsx';
-import Clubs from './Pages/Clubs.tsx';
+
+// Lazy load the components
+const HomePg = lazy(() => import('./Pages/HomePg.tsx'));
+const Clubs = lazy(() => import('./Pages/Clubs.tsx'));
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Routes>
-        <Route path="/" element={<HomePg />} />
-        <Route path="/clubs" element={<Clubs />} />
-      </Routes>
+      <Suspense fallback={<div className="flex justify-center items-center h-full">Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<HomePg />} />
+          <Route path="/clubs" element={<Clubs />} />
+        </Routes>
+      </Suspense>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
