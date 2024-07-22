@@ -114,7 +114,7 @@ export const Modal = ({
                   <img
                     src={image}
                     alt={title}
-                    className="lg:w-32 lg:h-32 h-20 w-20 object-cover rounded-t-2xl lg:mb-4 lg:px-0 px-2"
+                    className="lg:w-32 lg:h-32 h-20 w-24 object-cover rounded-t-2xl lg:mb-4 lg:px-0 px-2"
                   />
                 </div>
                 <div>
