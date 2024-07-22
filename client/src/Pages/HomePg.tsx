@@ -23,11 +23,11 @@ export default function HomePg() {
         >
           <img className="w-24" src={logouc} alt="Logo" />
         </motion.div>
-        <p className="py-1 bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent text-center text-6xl font-medium tracking-tight  md:text-6xl lg:relative absolute lg:bottom-0 bottom-[14rem] lg:left-0 left-[3.6rem]">
+        <p className="py-1 bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent text-center text-6xl font-medium tracking-tight  md:text-6xl lg:relative absolute lg:bottom-0 bottom-[12rem] lg:left-0 left-[3.1rem]">
           UniClubs
         </p>
-        <p className="bg-gradient-to-br from-slate-300 to-slate-500 py-1 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-4xl lg:mb-0 mb-20">
-          Discover, Connect, Excel
+        <p className="bg-gradient-to-br from-slate-300 to-slate-500 py-1 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent lg:text-4xl lg:mb-0 mb-20">
+          Discover. Connect. Excel.
         </p>
       </motion.h1>
     </Lamp>
