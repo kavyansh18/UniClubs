@@ -148,7 +148,7 @@ export const Modal = ({
                   <div className="flex space-x-1">{renderSocialLinks()}</div>
                 </div>
               </div>
-              <p className="font-normal text-base text-slate-500 mb-4 relative z-50 px-5 lg:text-m text-sm">
+              <p className="font-normal text-base text-slate-500 mb-4 relative z-50 px-5 lg:text-[18px] leading-normal text-sm">
                 {description}
               </p>
 

@@ -10,6 +10,10 @@ import kzilla from '../assets/kzilla.png';
 import nscc from '../assets/nscc.png';
 import gh from '../assets/gh.png';
 import dbug from '../assets/dbugl.png';
+import dsc from '../assets/dsc.png';
+import dsa from '../assets/dsa.png';
+import ar from '../assets/aarush.png';
+import { motion } from "framer-motion";
 
 export default function Clubs() {
   return (
@@ -17,9 +21,15 @@ export default function Clubs() {
       <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
       <Boxes />
+      <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.5, ease: "easeInOut" }}
+          >
       <h1 className={cn("md:text-3xl text-xl bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent relative z-20")}>
         Here are all listed clubs in our college
       </h1>
+      </motion.div>
 
       <div className="max-w-7xl mx-auto px-8">
         <HoverEffect items={projects} />
@@ -45,105 +55,144 @@ export const projects = [
     {
       title: "TPH X SRMIST",
       description:
-        "A streaming service that offers a wide variety of award-winning TV shows, movies, anime.",
+        "Welcome to TPHXSRM, the Product House SRM Web3 Club! We're a community exploring Web3 and blockchain, offering a platform for learning and innovation. Join us to work on real projects, interact with industry experts, and shape the digital future. Let's lead the next wave of technology together!",
       image: tph,
-      type: "Media Club",
-      website: "https://theproducthouse.com",
+      type: "Blockchain Club",
+      website: "https://0xsrmist.xyz/",
       socialLinks: [
-        { platform: "Instagram", link: "https://instagram.com/theproducthouse" },
-        { platform: "Twitter", link: "https://twitter.com/theproducthouse" },
-        { platform: "LinkedIn", link: "https://linkedin.com/company/theproducthouse" },
+        { platform: "Instagram", link: "https://www.instagram.com/0xsrmist/" },
+        { platform: "Twitter", link: "https://twitter.com/0xsrmist" },
+        { platform: "LinkedIn", link: "https://www.linkedin.com/company/tph-srmist" },
       ],
     },
     {
       title: "BlockChain Club",
       description:
-        "A multinational technology company that specializes in Internet-related services and products.",
+        "Blockchain Club SRM is the pioneer student-led club around concepts of Web3 and distributed consensus. We are a club of 40+ strong members with expertise in various domains and technologies. Blockchain Club SRM is a student driven community dedicated to improving the web3 sector.",
       image: bc,
-      type: "Finance Club",
-      website: "https://blockchainclub.org",
+      type: "Blockchain Club",
+      website: "https://www.blockchainclubsrm.com/",
       socialLinks: [
-        { platform: "Instagram", link: "https://instagram.com/blockchainclub" },
-        { platform: "Twitter", link: "https://twitter.com/blockchainclub" },
-        { platform: "LinkedIn", link: "https://linkedin.com/company/blockchainclub" },
+        { platform: "Instagram", link: "https://www.instagram.com/blockchainsrm/" },
+        { platform: "Twitter", link: "https://twitter.com/BlockchainSRM" },
+        { platform: "LinkedIn", link: "https://www.linkedin.com/company/blockchain-club-srm/" },
       ],
     },
     {
       title: "Google Developers Club",
       description:
-        "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
+        "Google Developer Student Club (GDSC) is a program for university students to learn mobile and web development. Open to all skill levels, GDSC offers a space to explore ideas, collaborate, and enhance development skills. Join us to innovate and solve development challenges together!",
       image: gdsc,
-      type: "Technology Club",
-      website: "https://developers.google.com",
+      type: "Developers Club",
+      website: "https://gdscsrm.com/",
       socialLinks: [
-        { platform: "Instagram", link: "https://instagram.com/googledevs" },
-        { platform: "Twitter", link: "https://twitter.com/googledevs" },
-        { platform: "LinkedIn", link: "https://linkedin.com/company/googledevs" },
+        { platform: "Instagram", link: "https://www.instagram.com/gdsc.srm/" },
+        { platform: "Twitter", link: "https://twitter.com/gdscsrm" },
+        { platform: "LinkedIn", link: "http://www.linkedin.com/company/gdscsrm" },
       ],
     },
     {
       title: "HackTheBox",
       description:
-        "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
+        "HackTheBox SRMIST focuses on training the next-gen of cyber-warriors transforming the cyber space in SRMIST and beyond.",
       image: htb,
-      type: "Technology Club",
-      website: "https://hackthebox.com",
+      type: "Cyber Security Club",
+      website: "https://www.htbsrmist.tech/",
       socialLinks: [
-        { platform: "Instagram", link: "https://instagram.com/hackthebox" },
-        { platform: "Twitter", link: "https://twitter.com/hackthebox" },
-        { platform: "LinkedIn", link: "https://linkedin.com/company/hackthebox" },
+        { platform: "Instagram", link: "https://www.instagram.com/htbsrmist/" },
+        { platform: "Twitter", link: "https://twitter.com/htbsrmist" },
+        { platform: "LinkedIn", link: "https://www.linkedin.com/company/htbsrmist/" },
       ],
     },
     {
       title: "SRMKZILLA",
       description:
-        "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software.",
+        "SRMZKILLA is an open-source student dev community at SRM Institute of Science and Technology. We bridge the gap between academics and practical skills through collaborative projects, workshops, and hackathons. Our mentorship programs and networking events connect students with industry professionals and alumni.",
       image: kzilla,
       type: "Technology Club",
-      website: "https://srmkzilla.net",
+      website: "https://www.srmkzilla.net/",
       socialLinks: [
-        { platform: "Instagram", link: "https://instagram.com/srmkzilla" },
-        { platform: "Twitter", link: "https://twitter.com/srmkzilla" },
-        { platform: "LinkedIn", link: "https://linkedin.com/company/srmkzilla" },
+        { platform: "Instagram", link: "https://www.instagram.com/srmkzilla/" },
+        { platform: "Twitter", link: "https://twitter.com/SRMKZILLA_Club" },
+        { platform: "LinkedIn", link: "https://www.linkedin.com/company/srmkzilla/" },
       ],
     },
     {
       title: "Newton School Coding Club",
       description:
-        "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software.",
+        "Welcome to Newton School Coding Club SRM! We're proud to offer an excellent platform for students who want to do well in coding and technology. Our club has three parts: Technical, Creatives, and Non-Technical. Each part helps you learn and grow in different ways. We organize fun events that teach you a lot.",
       image: nscc,
       type: "Coding Club",
-      website: "https://newtonschool.co",
+      website: "https://www.nsccsrm.tech/",
       socialLinks: [
-        { platform: "Instagram", link: "https://instagram.com/newtonschool" },
-        { platform: "Twitter", link: "https://twitter.com/newtonschool" },
-        { platform: "LinkedIn", link: "https://linkedin.com/company/newtonschool" },
+        { platform: "Instagram", link: "https://www.instagram.com/nscc_srm/" },
+        { platform: "Twitter", link: "https://twitter.com/nsccsrm?lang=en" },
+        { platform: "LinkedIn", link: "https://www.linkedin.com/company/newton-school-coding-club-srmist/mycompany/" },
       ],
     },
     {
       title: "GitHub Community",
       description:
-        "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software.",
+        "GitHub Community SRM is the foremost student-led community spearheading the Open Source Revolution at SRMIST, Chennai.",
       image: gh,
       type: "Technology Club",
-      website: "https://github.com",
+      website: "http://githubsrm.tech/",
       socialLinks: [
-        { platform: "Instagram", link: "https://instagram.com/github" },
-        { platform: "Twitter", link: "https://twitter.com/github" },
-        { platform: "LinkedIn", link: "https://linkedin.com/company/github" },
+        { platform: "Instagram", link: "https://www.instagram.com/githubsrm/?hl=en" },
+        { platform: "Twitter", link: "https://twitter.com/githubsrm" },
+        { platform: "LinkedIn", link: "https://in.linkedin.com/company/githubsrm" },
+      ],
+    },
+    {
+      title: "Data Science Community",
+      description:
+        "We are a technology-driven Data Science-based student-led innovation community at SRM IST. Our aim is to foster development and entrepreneurial skills among students and work as a community that inspires thousands.",
+      image: dsc,
+      type: "Data Science Club",
+      website: "https://www.dscommunity.in/",
+      socialLinks: [
+        { platform: "Instagram", link: "https://www.instagram.com/dscommunity_srm/" },
+        { platform: "Twitter", link: "https://twitter.com/dscommunitysrm" },
+        { platform: "LinkedIn", link: "https://www.linkedin.com/company/datasciencecommunitysrm" },
       ],
     },
     {
       title: "DBug Labs",
       description:
-        "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software.",
+        "Found a bug? You came to the right place to fix it. We are a team that wants to make a big change in the ever-changing programming and software development world.",
       image: dbug,
       type: "Technology Club",
-      website: "https://dbuglabs.com",
+      website: "https://dbuglabs.vercel.app/",
       socialLinks: [
-        { platform: "Instagram", link: "https://instagram.com/dbuglabs" },
+        { platform: "Instagram", link: "https://www.instagram.com/dbuglabs/" },
         { platform: "Twitter", link: "https://twitter.com/dbuglabs" },
-        { platform: "LinkedIn", link: "https://linkedin.com/company/dbuglabs" },
+        { platform: "LinkedIn", link: "https://www.linkedin.com/company/dbuglabs/" },
+      ],
+    },
+    {
+      title: "Directorate of Student Affairs",
+      description:
+        "Welcome to the Directorate of Student Affairs (DSA) at SRMIST, Kattankulathur. We offer students opportunities beyond the classroom with 16 clubs and 8 houses, fostering holistic development and collaboration. Join us to explore your potential and embody SRMIST's motto: LEARN. LEAP. LEAD.",
+      image: dsa,
+      type: "Cultural Club",
+      website: "https://dsaweb18.wixsite.com/dsa-recrutiment/about-us",
+      socialLinks: [
+        { platform: "Instagram", link: "https://www.instagram.com/srmist_dsa/" },
+        { platform: "Twitter", link: "https://twitter.com/dsasrmist" },
+        { platform: "LinkedIn", link: "https://www.linkedin.com/in/directorate-of-student-affairs-srmist-dsa/?originalSubdomain=in" },
+      ],
+    },
+    {
+      title: "Aarush",
+      description:
+        "Since 1985, SRMIST has been a premier institution with over 50,000 students from 64+ countries. It offers top-ranked programs in Engineering, Management, Medicine, Health Sciences, and Science and Humanities. With state-of-the-art facilities, SRMIST is accredited by UGC and NAAC with an 'A++' grade",
+      image: ar,
+      type: "Cultural Club",
+      website: "https://aaruush.org/",
+      socialLinks: [
+        { platform: "Instagram", link: "https://www.instagram.com/aaruush_srm/" },
+        { platform: "Twitter", link: "https://twitter.com/aaruushsrmist" },
+        { platform: "LinkedIn", link: "https://www.linkedin.com/company/aaruush-srm-ist/" },
       ],
     },
   ];
