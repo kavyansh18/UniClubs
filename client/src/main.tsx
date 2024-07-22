@@ -1,12 +1,8 @@
-import HomePg from './Pages/HomePg.tsx'
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import HomePg from './Pages/HomePg.tsx';
 import Clubs from './Pages/Clubs.tsx';
 
 ReactDOM.render(
