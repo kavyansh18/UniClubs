@@ -45,7 +45,7 @@ export const projects = [
         "⁠The Next Tech Lab pioneers advancements in AI, Cryptography, IoT, Blockchain, and Extended Reality. We foster collaboration to develop transformative solutions like AI-driven automation, secure cryptographic techniques, interconnected IoT systems, transparent blockchain transactions, and immersive XR experiences, driving technological progress and innovation.",
       image: ntl,
       type: "Technology Research Lab",
-      website: "https://nexttechlab.org",
+      website: "https://next-tech-site.vercel.app/",
       socialLinks: [
         { platform: "Instagram", link: "https://instagram.com/nexttechlab" },
         { platform: "Twitter", link: "https://twitter.com/nexttechlab" },
