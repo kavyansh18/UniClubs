@@ -41,7 +41,7 @@ export default function CardSpotlightDemo() {
   };
   return (
     <div className="bg-gradient-to-r from-slate-500 to-slate-800 pb-10">
-      <h1 className="flex justify-center items-center mb-10 pt-6 lg:text-2xl text-xl text-black font-bold font-mono">
+      <h1 className="flex justify-center items-center mb-10 pt-6 lg:text-2xl text-sm text-black font-bold font-mono">
         Here are the listed clubs in out college
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-10 w-full mx-auto lg:px-28">
