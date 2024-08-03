@@ -14,6 +14,8 @@ import dsa from "../assets/dsa.webp";
 import ar from "../assets/aarush.webp";
 import "../index.css";
 import { Modal } from "../Components/Modal.tsx";
+import cherry from '../assets/cherry.png'
+import gen from '../assets/gen.png'
 
 export default function CardSpotlightDemo() {
   const [selectedItem, setSelectedItem] = useState<{
@@ -364,6 +366,56 @@ export default function CardSpotlightDemo() {
           </div>
         </CardSpotlight>
         </div>
+
+        <div className="flex justify-center items-center">
+        <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
+          <div>
+            <div>
+              <img className="w-32 relative z-20" src={cherry} alt="" />
+            </div>
+            <div className="text-white text-[30px] relative z-20">Cherry+ Network</div>
+            <div className="text-white text-xl relative z-20">
+              Technical Club
+            </div>
+            <div>
+            <button
+                onClick={() => handleOpenModal(projects[12])}
+                className="relative mt-4 inline-flex items-center justify-start px-4 py-1.5 overflow-hidden font-medium transition-all bg-gradient-to-r from-slate-300 to-slate-500 rounded-3xl hover:bg-white group"
+              >
+                <span className="w-48 h-44 rounded rotate-[-50deg] bg-gradient-to-r from-blue-600 to-violet-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                  View More
+                </span>
+              </button>
+            </div>
+          </div>
+        </CardSpotlight>
+        </div>
+
+        <div className="flex justify-center items-center">
+        <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
+          <div>
+            <div>
+              <img className="w-32 relative z-20" src={gen} alt="" />
+            </div>
+            <div className="text-white text-[30px] relative z-20">NEXTGEN Al</div>
+            <div className="text-white text-xl relative z-20">
+              AI Club
+            </div>
+            <div>
+            <button
+                onClick={() => handleOpenModal(projects[13])}
+                className="relative mt-4 inline-flex items-center justify-start px-4 py-1.5 overflow-hidden font-medium transition-all bg-gradient-to-r from-slate-300 to-slate-500 rounded-3xl hover:bg-white group"
+              >
+                <span className="w-48 h-44 rounded rotate-[-50deg] bg-gradient-to-r from-blue-600 to-violet-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                  View More
+                </span>
+              </button>
+            </div>
+          </div>
+        </CardSpotlight>
+        </div>
       </div>
 
       {selectedItem && (
@@ -578,6 +630,38 @@ export const projects = [
       {
         platform: "LinkedIn",
         link: "https://www.linkedin.com/company/aaruush-srm-ist/",
+      },
+    ],
+  },
+  {
+    title: "Cherry+ Network",
+    description:
+      "We offer internships, skill-development workshops, and courses to students, particularly those who are new to vocational education.We strive to build a community of creative thinkers where students can choose the field they want to follow as a career and receive support as they advance in that profession.",
+    image: cherry,
+    type: "Technical Club",
+    website: "https://www.cherrynetwork.in/",
+    socialLinks: [
+      { platform: "Instagram", link: "https://www.instagram.com/cherry.network/" },
+      { platform: "Twitter", link: "https://www.cherrynetwork.in/" },
+      {
+        platform: "LinkedIn",
+        link: "https://www.linkedin.com/company/cherry-network/",
+      },
+    ],
+  },
+  {
+    title: "Nextgen Al Club",
+    description:
+      "CINTEL’s NEXT-GEN AI offers a transformative journey in learning and personal growth. Our club is not just about acquiring knowledge but about preparing for the future by doing. Join us to embark on a memorable journey where learning meets action, and end with tangible success.",
+    image: gen,
+    type: "AI Club",
+    website: "https://www.srmist.edu.in/department/department-of-computational-intelligence/nextgen-al/",
+    socialLinks: [
+      { platform: "Instagram", link: "https://www.instagram.com/next_gen.ai/" },
+      { platform: "Twitter", link: "https://www.srmist.edu.in/department/department-of-computational-intelligence/nextgen-al/" },
+      {
+        platform: "LinkedIn",
+        link: "https://www.linkedin.com/company/cintels-next-gen-ai/?originalSubdomain=in",
       },
     ],
   },
