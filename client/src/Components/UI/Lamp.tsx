@@ -111,7 +111,7 @@ export const Lamp = ({
 
       <motion.div
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
             className="w-full z-50 absolute lg:bottom-9 bottom-[6rem] right-0 flex justify-center items-center"
           >
