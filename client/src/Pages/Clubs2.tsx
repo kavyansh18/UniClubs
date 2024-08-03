@@ -1,4 +1,4 @@
-import { CardSpotlight } from "../Components/UI/CardSpotlight.tsx";
+import { CardSpotlight } from "../Components/UI/CardSpotlight2.tsx";
 import { useState } from "react";
 import "../index.css";
 import { Modal } from "../Components/Modal.tsx";
