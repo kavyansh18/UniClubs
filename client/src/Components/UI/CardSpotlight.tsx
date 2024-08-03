@@ -1,8 +1,8 @@
 "use client";
-import { cn } from "../../Lib/utils";
 import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
-import React, { MouseEvent as ReactMouseEvent } from "react";
-import { CanvasRevealEffect } from "../UI/CanvasRevealEffect";
+import React, { MouseEvent as ReactMouseEvent, useState } from "react";
+import { CanvasRevealEffect } from "./CanvasRevealEffect.tsx";
+import { cn } from "../../Lib/utils.ts";
 
 export const CardSpotlight = ({
   children,
@@ -24,17 +24,22 @@ export const CardSpotlight = ({
   }: ReactMouseEvent<HTMLDivElement>) {
     let { left, top } = currentTarget.getBoundingClientRect();
 
-    console.log("mouse moving");
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
   }
+
+  const [isHovering, setIsHovering] = useState(false);
+  const handleMouseEnter = () => setIsHovering(true);
+  const handleMouseLeave = () => setIsHovering(false);
   return (
     <div
       className={cn(
-        "group/spotlight px-8 py-4 rounded-md relative border border-neutral-800 bg-gradient-to-r from-gray-700 to-black dark:border-neutral-800",
+        "group/spotlight px-8 py-4 rounded-md relative border border-neutral-800 bg-black dark:border-neutral-800",
         className
       )}
       onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       {...props}
     >
       <motion.div
@@ -50,15 +55,17 @@ export const CardSpotlight = ({
           `,
         }}
       >
-        <CanvasRevealEffect
-          animationSpeed={5}
-          containerClassName="bg-transparent absolute inset-0 pointer-events-none"
-          colors={[
-            [59, 130, 246],
-            [139, 92, 246],
-          ]}
-          dotSize={3}
-        />
+        {isHovering && (
+          <CanvasRevealEffect
+            animationSpeed={5}
+            containerClassName="bg-transparent absolute inset-0 pointer-events-none"
+            colors={[
+              [59, 130, 246],
+              [139, 92, 246],
+            ]}
+            dotSize={3}
+          />
+        )}
       </motion.div>
       {children}
     </div>
