@@ -20,6 +20,7 @@ import q from '../assets/quantumsrm_logo.jpeg'
 import cn from '../assets/cn.png'
 import sq from '../assets/sq.webp'
 import mlsa from '../assets/mlsa.png'
+import  CardSpotlightDemo2  from './Clubs2.tsx'
 
 export default function CardSpotlightDemo() {
   const [selectedItem, setSelectedItem] = useState<{
@@ -446,7 +447,7 @@ export default function CardSpotlightDemo() {
         </CardSpotlight>
         </div>
 
-        <div className="flex justify-center items-center">
+        {/* <div className="flex justify-center items-center">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
@@ -519,7 +520,10 @@ export default function CardSpotlightDemo() {
             </div>
           </div>
         </CardSpotlight>
-        </div>
+        </div> */}
+      </div>
+      <div className="mt-9">
+      <CardSpotlightDemo2 />
       </div>
 
       {selectedItem && (
@@ -785,52 +789,52 @@ export const projects = [
       },
     ],
   },
-  {
-    title: "Coding Ninjas SRM",
-    description:
-      "Welcome to Coding Ninjas Club SRM! We are a community of passionate coders dedicated to exploring technology and creating innovative solutions. Our club hosts events like Hackathons, Workshops, and Gaming Events, encouraging members to use their skills to solve real-world problems.",
-    image: cn,
-    type: "Coding Club",
-    website: "https://cnwebsite22.vercel.app/",
-    socialLinks: [
-      { platform: "Instagram", link: "https://www.instagram.com/coding.ninjas/?hl=en" },
-      { platform: "Twitter", link: "https://x.com/ninjassrm" },
-      {
-        platform: "LinkedIn",
-        link: "https://www.linkedin.com/company/coding-ninjas-club-srm/?originalSubdomain=in",
-      },
-    ],
-  },
-  {
-    title: "SRM Qkrishi",
-    description:
-      "Qrishi to establish the SRM Qkrishi Center of Excellence in Quantum Information and Computing. This interdisciplinary research center focuses on advancing quantum software, algorithms education, and research, supporting India's skilling mission.",
-    image: sq,
-    type: "Quantum Club",
-    website: "https://srm-quic.vercel.app/",
-    socialLinks: [
-      { platform: "Instagram", link: "https://www.instagram.com/sq_quic/" },
-      { platform: "Twitter", link: "https://x.com/sqquic" },
-      {
-        platform: "LinkedIn",
-        link: "https://www.linkedin.com/company/sq-quic/about/",
-      },
-    ],
-  },
-  {
-    title: "Microsoft Learn Student Ambassadors",
-    description:
-      "Qrishi to establish the SRM Qkrishi Center of Excellence in Quantum Information and Computing. This interdisciplinary research center focuses on advancing quantum software, algorithms education, and research, supporting India's skilling mission.",
-    image: mlsa,
-    type: "Technical Club",
-    website: "https://mlsasrm.in/",
-    socialLinks: [
-      { platform: "Instagram", link: "https://www.instagram.com/mlsa.srm/?hl=en" },
-      { platform: "Twitter", link: "https://x.com/mlsasrm" },
-      {
-        platform: "LinkedIn",
-        link: "https://www.linkedin.com/company/mlsa-srm/?originalSubdomain=in",
-      },
-    ],
-  },
+  // {
+  //   title: "Coding Ninjas SRM",
+  //   description:
+  //     "Welcome to Coding Ninjas Club SRM! We are a community of passionate coders dedicated to exploring technology and creating innovative solutions. Our club hosts events like Hackathons, Workshops, and Gaming Events, encouraging members to use their skills to solve real-world problems.",
+  //   image: cn,
+  //   type: "Coding Club",
+  //   website: "https://cnwebsite22.vercel.app/",
+  //   socialLinks: [
+  //     { platform: "Instagram", link: "https://www.instagram.com/coding.ninjas/?hl=en" },
+  //     { platform: "Twitter", link: "https://x.com/ninjassrm" },
+  //     {
+  //       platform: "LinkedIn",
+  //       link: "https://www.linkedin.com/company/coding-ninjas-club-srm/?originalSubdomain=in",
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "SRM Qkrishi",
+  //   description:
+  //     "Qrishi to establish the SRM Qkrishi Center of Excellence in Quantum Information and Computing. This interdisciplinary research center focuses on advancing quantum software, algorithms education, and research, supporting India's skilling mission.",
+  //   image: sq,
+  //   type: "Quantum Club",
+  //   website: "https://srm-quic.vercel.app/",
+  //   socialLinks: [
+  //     { platform: "Instagram", link: "https://www.instagram.com/sq_quic/" },
+  //     { platform: "Twitter", link: "https://x.com/sqquic" },
+  //     {
+  //       platform: "LinkedIn",
+  //       link: "https://www.linkedin.com/company/sq-quic/about/",
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Microsoft Learn Student Ambassadors",
+  //   description:
+  //     "Qrishi to establish the SRM Qkrishi Center of Excellence in Quantum Information and Computing. This interdisciplinary research center focuses on advancing quantum software, algorithms education, and research, supporting India's skilling mission.",
+  //   image: mlsa,
+  //   type: "Technical Club",
+  //   website: "https://mlsasrm.in/",
+  //   socialLinks: [
+  //     { platform: "Instagram", link: "https://www.instagram.com/mlsa.srm/?hl=en" },
+  //     { platform: "Twitter", link: "https://x.com/mlsasrm" },
+  //     {
+  //       platform: "LinkedIn",
+  //       link: "https://www.linkedin.com/company/mlsa-srm/?originalSubdomain=in",
+  //     },
+  //   ],
+  // },
 ];

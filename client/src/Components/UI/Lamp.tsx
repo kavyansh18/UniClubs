@@ -116,7 +116,7 @@ export const Lamp = ({
             className="w-full z-50 absolute lg:bottom-9 bottom-[6rem] right-0 flex justify-center items-center"
           >
             <div className="text-white text-[13px]">
-              Developed with ❤️ by <span><a href="https://linktr.ee/kavyansh.in" className="hover:text-cyan-400 transition-colors duration-300 ease-in-out">Kavyansh</a></span>
+              Developed with ❤️ by <span><a href="https://linktr.ee/kavyansh.in" target="_blank" className="hover:text-cyan-400 transition-colors duration-300 ease-in-out">Kavyansh</a></span>
             </div>
           </motion.div>
     </div>
