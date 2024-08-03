@@ -24,7 +24,7 @@ export const Lamp = ({
         initial={{ opacity: 0, y: -70 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
-         className="flex justify-center items-center w-full z-50 lg:relative absolute top-20 lg:top-0"
+         className="flex justify-center items-center w-full z-50 lg:relative absolute top-16 lg:top-0"
       >
         <div>
           <img className="w-24" src={logouc} alt="Logo" />
