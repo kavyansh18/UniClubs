@@ -17,7 +17,7 @@ import '../index.css'
 export default function CardSpotlightDemo() {
   return (
     <div className="bg-gradient-to-r from-slate-500 to-slate-800 pb-10">
-      <h1 className="flex justify-center items-center mb-10 pt-6 text-3xl">
+      <h1 className="flex justify-center items-center mb-10 pt-6 text-3xl text-black font-bold">
         Here are the listed clubs in out college
       </h1>
       <div className="grid grid-cols-3 justify-center items-center gap-8 w-full px-28">
