@@ -16,6 +16,9 @@ import "../index.css";
 import { Modal } from "../Components/Modal.tsx";
 import cherry from '../assets/cherry.png'
 import gen from '../assets/gen.png'
+import q from '../assets/quantumsrm_logo.jpeg'
+import cn from '../assets/cn.png'
+import sq from '../assets/sq.webp'
 
 export default function CardSpotlightDemo() {
   const [selectedItem, setSelectedItem] = useState<{
@@ -416,6 +419,81 @@ export default function CardSpotlightDemo() {
           </div>
         </CardSpotlight>
         </div>
+
+        <div className="flex justify-center items-center">
+        <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
+          <div>
+            <div>
+              <img className="w-28 relative z-20 mb-6" src={q} alt="" />
+            </div>
+            <div className="text-white text-[22px] relative z-20">Quantum Computing Club</div>
+            <div className="text-white text-xl relative z-20">
+            Quantum Club
+            </div>
+            <div>
+            <button
+                onClick={() => handleOpenModal(projects[14])}
+                className="relative mt-4 inline-flex items-center justify-start px-4 py-1.5 overflow-hidden font-medium transition-all bg-gradient-to-r from-slate-300 to-slate-500 rounded-3xl hover:bg-white group"
+              >
+                <span className="w-48 h-44 rounded rotate-[-50deg] bg-gradient-to-r from-blue-600 to-violet-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                  View More
+                </span>
+              </button>
+            </div>
+          </div>
+        </CardSpotlight>
+        </div>
+
+        <div className="flex justify-center items-center">
+        <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
+          <div>
+            <div>
+              <img className="w-32 relative z-20" src={cn} alt="" />
+            </div>
+            <div className="text-white text-[30px] relative z-20">Coding Ninjas SRM</div>
+            <div className="text-white text-xl relative z-20">
+            Coding Club
+            </div>
+            <div>
+            <button
+                onClick={() => handleOpenModal(projects[15])}
+                className="relative mt-4 inline-flex items-center justify-start px-4 py-1.5 overflow-hidden font-medium transition-all bg-gradient-to-r from-slate-300 to-slate-500 rounded-3xl hover:bg-white group"
+              >
+                <span className="w-48 h-44 rounded rotate-[-50deg] bg-gradient-to-r from-blue-600 to-violet-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                  View More
+                </span>
+              </button>
+            </div>
+          </div>
+        </CardSpotlight>
+        </div>
+
+        <div className="flex justify-center items-center">
+        <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
+          <div>
+            <div>
+              <img className="w-28 relative z-20 mb-3" src={sq} alt="" />
+            </div>
+            <div className="text-white text-[32px] relative z-20">SRM Qkrishi</div>
+            <div className="text-white text-xl relative z-20">
+            Quantum Club
+            </div>
+            <div>
+            <button
+                onClick={() => handleOpenModal(projects[16])}
+                className="relative mt-4 inline-flex items-center justify-start px-4 py-1.5 overflow-hidden font-medium transition-all bg-gradient-to-r from-slate-300 to-slate-500 rounded-3xl hover:bg-white group"
+              >
+                <span className="w-48 h-44 rounded rotate-[-50deg] bg-gradient-to-r from-blue-600 to-violet-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                  View More
+                </span>
+              </button>
+            </div>
+          </div>
+        </CardSpotlight>
+        </div>
       </div>
 
       {selectedItem && (
@@ -662,6 +740,54 @@ export const projects = [
       {
         platform: "LinkedIn",
         link: "https://www.linkedin.com/company/cintels-next-gen-ai/?originalSubdomain=in",
+      },
+    ],
+  },
+  {
+    title: "Quantum Computing Club SRM",
+    description:
+      "A student-led Quantum community focused on Quantum Education & Skilling to accelerate tomorrow's quantum workforce by providing undergrads exposure to research and training.",
+    image: q,
+    type: "Quantum Club",
+    website: "https://not-foundd.netlify.app/",
+    socialLinks: [
+      { platform: "Instagram", link: "https://www.instagram.com/quantum_srm/" },
+      { platform: "Twitter", link: "https://not-foundd.netlify.app/" },
+      {
+        platform: "LinkedIn",
+        link: "https://www.linkedin.com/company/quantumsrm/",
+      },
+    ],
+  },
+  {
+    title: "Coding Ninjas SRM",
+    description:
+      "Welcome to Coding Ninjas Club SRM! We are a community of passionate coders dedicated to exploring technology and creating innovative solutions. Our club hosts events like Hackathons, Workshops, and Gaming Events, encouraging members to use their skills to solve real-world problems.",
+    image: cn,
+    type: "Coding Club",
+    website: "https://cnwebsite22.vercel.app/",
+    socialLinks: [
+      { platform: "Instagram", link: "https://www.instagram.com/coding.ninjas/?hl=en" },
+      { platform: "Twitter", link: "https://x.com/ninjassrm" },
+      {
+        platform: "LinkedIn",
+        link: "https://www.linkedin.com/company/coding-ninjas-club-srm/?originalSubdomain=in",
+      },
+    ],
+  },
+  {
+    title: "SRM Qkrishi",
+    description:
+      "Qrishi to establish the SRM Qkrishi Center of Excellence in Quantum Information and Computing. This interdisciplinary research center focuses on advancing quantum software, algorithms education, and research, supporting India's skilling mission.",
+    image: sq,
+    type: "Quantum Club",
+    website: "https://srm-quic.vercel.app/",
+    socialLinks: [
+      { platform: "Instagram", link: "https://www.instagram.com/sq_quic/" },
+      { platform: "Twitter", link: "https://x.com/sqquic" },
+      {
+        platform: "LinkedIn",
+        link: "https://www.linkedin.com/company/sq-quic/about/",
       },
     ],
   },
