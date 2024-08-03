@@ -1,6 +1,5 @@
 import { CardSpotlight } from "../Components/UI/CardSpotlight.tsx";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 import ntl from "../assets/ntl.webp";
 import tph from "../assets/tph.webp";
 import bc from "../assets/bc.webp";
@@ -42,10 +41,10 @@ export default function CardSpotlightDemo() {
   };
   return (
     <div className="bg-gradient-to-r from-slate-500 to-slate-800 pb-10">
-      <h1 className="flex justify-center items-center mb-10 pt-6 text-3xl text-black font-bold">
+      <h1 className="flex justify-center items-center mb-10 pt-6 lg:text-3xl text-xl text-black font-bold">
         Here are the listed clubs in out college
       </h1>
-      <div className="grid grid-cols-3 justify-center items-center gap-8 w-full px-28">
+      <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-8 w-full lg:px-28 px-8">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
