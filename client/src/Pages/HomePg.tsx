@@ -17,7 +17,7 @@ export default function HomePg() {
         }}
       >
         
-        <p className="py-1 bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent text-center text-6xl font-medium tracking-tight  md:text-6xl lg:relative absolute lg:bottom-0 bottom-[14rem] lg:left-0 left-[1.5rem]">
+        <p className="py-1 bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent text-center text-6xl font-medium tracking-tight  md:text-6xl lg:relative absolute lg:bottom-0 bottom-[13.4rem] lg:left-0 left-[1.5rem]">
           UniClubs
         </p>
         <p className="bg-gradient-to-br from-slate-300 to-slate-500 py-1 bg-clip-text text-center text-4xl font-medium text-transparent lg:text-5xl lg:mb-0 mb-20 font-odibee-sans tracking-wide">
