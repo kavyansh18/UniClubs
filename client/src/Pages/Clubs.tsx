@@ -17,9 +17,6 @@ import { Modal } from "../Components/Modal.tsx";
 import cherry from '../assets/cherry.png'
 import gen from '../assets/gen.png'
 import q from '../assets/quantumsrm_logo.jpeg'
-import cn from '../assets/cn.png'
-import sq from '../assets/sq.webp'
-import mlsa from '../assets/mlsa.png'
 import  CardSpotlightDemo2  from './Clubs2.tsx'
 
 export default function CardSpotlightDemo() {
