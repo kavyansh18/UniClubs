@@ -44,7 +44,8 @@ export default function CardSpotlightDemo() {
       <h1 className="flex justify-center items-center mb-10 pt-6 lg:text-3xl text-xl text-black font-bold">
         Here are the listed clubs in out college
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-8 w-full lg:px-28 px-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-10 w-full mx-auto lg:px-28">
+        <div className="flex justify-center items-center">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
@@ -69,7 +70,9 @@ export default function CardSpotlightDemo() {
             </div>
           </div>
         </CardSpotlight>
+        </div>
 
+        <div className="flex justify-center items-center">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
@@ -94,7 +97,9 @@ export default function CardSpotlightDemo() {
             </div>
           </div>
         </CardSpotlight>
+        </div>
 
+        <div className="flex justify-center items-center">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
@@ -119,7 +124,9 @@ export default function CardSpotlightDemo() {
             </div>
           </div>
         </CardSpotlight>
+        </div>
 
+        <div className="flex justify-center items-center">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
@@ -144,7 +151,9 @@ export default function CardSpotlightDemo() {
             </div>
           </div>
         </CardSpotlight>
+        </div>
 
+        <div className="flex justify-center items-center">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
@@ -169,7 +178,9 @@ export default function CardSpotlightDemo() {
             </div>
           </div>
         </CardSpotlight>
+        </div>
 
+        <div className="flex justify-center items-center">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
@@ -194,7 +205,9 @@ export default function CardSpotlightDemo() {
             </div>
           </div>
         </CardSpotlight>
+        </div>
 
+        <div className="flex justify-center items-center">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
@@ -217,7 +230,9 @@ export default function CardSpotlightDemo() {
             </div>
           </div>
         </CardSpotlight>
+        </div>
 
+        <div className="flex justify-center items-center">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
@@ -242,7 +257,9 @@ export default function CardSpotlightDemo() {
             </div>
           </div>
         </CardSpotlight>
+        </div>
 
+        <div className="flex justify-center items-center">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
@@ -267,7 +284,9 @@ export default function CardSpotlightDemo() {
             </div>
           </div>
         </CardSpotlight>
+        </div>
 
+        <div className="flex justify-center items-center">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
@@ -292,7 +311,9 @@ export default function CardSpotlightDemo() {
             </div>
           </div>
         </CardSpotlight>
+        </div>
 
+        <div className="flex justify-center items-center">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
@@ -317,7 +338,9 @@ export default function CardSpotlightDemo() {
             </div>
           </div>
         </CardSpotlight>
+        </div>
 
+        <div className="flex justify-center items-center">
         <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
           <div>
             <div>
@@ -340,6 +363,7 @@ export default function CardSpotlightDemo() {
             </div>
           </div>
         </CardSpotlight>
+        </div>
       </div>
 
       {selectedItem && (

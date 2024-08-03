@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import { Lamp } from "../Components/UI/Lamp";
-import logouc from "../assets/logouc.webp";
 import "../font.css"
 
 export default function HomePg() {
