@@ -99,7 +99,7 @@ export const Lamp = ({
             transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
             className="w-full absolute top-[18rem] right-0 flex justify-center items-center"
           >
-            <div className="text-white text-[15px] hover:text-cyan-400 transition-colors duration-300 ease-in-out">
+            <div className="text-white text-[16px] hover:text-cyan-400 transition-colors duration-300 ease-in-out">
               Let's find perfect club for you in SRM
             </div>
             <div>
@@ -108,6 +108,17 @@ export const Lamp = ({
           </motion.div>
         </NavLink>
       </div>
+
+      <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+            className="w-full absolute bottom-7 right-0 flex justify-center items-center"
+          >
+            <div className="text-white text-[12px]">
+              Developed with ❤️ by <span><a href="https://linktr.ee/kavyansh.in" className="hover:text-cyan-400 transition-colors duration-300 ease-in-out">Kavyansh</a></span>
+            </div>
+          </motion.div>
     </div>
   );
 };
