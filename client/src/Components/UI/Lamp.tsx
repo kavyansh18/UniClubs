@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { cn } from "../../Lib/utils.ts";
 import arrow from "../../assets/arrow.svg";
 import { NavLink } from "react-router-dom";
+import logouc from "../../assets/logouc.webp";
 
 export const Lamp = ({
   children,
@@ -15,10 +16,20 @@ export const Lamp = ({
   return (
     <div
       className={cn(
-        "relative flex h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0 lg:pt-24",
+        "relative flex h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0 lg:pt-8",
         className
       )}
     >
+      <motion.div
+        initial={{ opacity: 0, y: -70 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
+         className="flex justify-center items-center w-full z-50 lg:relative absolute top-20 lg:top-0"
+      >
+        <div>
+          <img className="w-24" src={logouc} alt="Logo" />
+        </div>
+      </motion.div>
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 h-screen">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
