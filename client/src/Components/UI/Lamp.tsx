@@ -115,7 +115,7 @@ export const Lamp = ({
             transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
             className="w-full z-50 absolute bottom-7 right-0 flex justify-center items-center"
           >
-            <div className="text-white text-[12px]">
+            <div className="text-white text-[13px]">
               Developed with ❤️ by <span><a href="https://linktr.ee/kavyansh.in" className="hover:text-cyan-400 transition-colors duration-300 ease-in-out">Kavyansh</a></span>
             </div>
           </motion.div>
