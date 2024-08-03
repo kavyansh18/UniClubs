@@ -19,6 +19,7 @@ import gen from '../assets/gen.png'
 import q from '../assets/quantumsrm_logo.jpeg'
 import cn from '../assets/cn.png'
 import sq from '../assets/sq.webp'
+import mlsa from '../assets/mlsa.png'
 
 export default function CardSpotlightDemo() {
   const [selectedItem, setSelectedItem] = useState<{
@@ -494,6 +495,31 @@ export default function CardSpotlightDemo() {
           </div>
         </CardSpotlight>
         </div>
+
+        <div className="flex justify-center items-center">
+        <CardSpotlight className="h-80 w-80 rounded-3xl flex flex-col justify-start items-start">
+          <div>
+            <div>
+              <img className="w-28 relative z-20" src={mlsa} alt="" />
+            </div>
+            <div className="text-white text-[22px] relative z-20">Microsoft Learn Student Ambassadors SRM</div>
+            <div className="text-white text-xl relative z-20">
+            Technical Club
+            </div>
+            <div>
+            <button
+                onClick={() => handleOpenModal(projects[17])}
+                className="relative mt-4 inline-flex items-center justify-start px-4 py-1.5 overflow-hidden font-medium transition-all bg-gradient-to-r from-slate-300 to-slate-500 rounded-3xl hover:bg-white group"
+              >
+                <span className="w-48 h-44 rounded rotate-[-50deg] bg-gradient-to-r from-blue-600 to-violet-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                  View More
+                </span>
+              </button>
+            </div>
+          </div>
+        </CardSpotlight>
+        </div>
       </div>
 
       {selectedItem && (
@@ -788,6 +814,22 @@ export const projects = [
       {
         platform: "LinkedIn",
         link: "https://www.linkedin.com/company/sq-quic/about/",
+      },
+    ],
+  },
+  {
+    title: "Microsoft Learn Student Ambassadors",
+    description:
+      "Qrishi to establish the SRM Qkrishi Center of Excellence in Quantum Information and Computing. This interdisciplinary research center focuses on advancing quantum software, algorithms education, and research, supporting India's skilling mission.",
+    image: mlsa,
+    type: "Technical Club",
+    website: "https://mlsasrm.in/",
+    socialLinks: [
+      { platform: "Instagram", link: "https://www.instagram.com/mlsa.srm/?hl=en" },
+      { platform: "Twitter", link: "https://x.com/mlsasrm" },
+      {
+        platform: "LinkedIn",
+        link: "https://www.linkedin.com/company/mlsa-srm/?originalSubdomain=in",
       },
     ],
   },

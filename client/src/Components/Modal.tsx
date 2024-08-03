@@ -108,8 +108,8 @@ export const Modal = ({
         <div className="relative mt-10">
           <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] rounded-full blur-3xl " />
           <div className="flex justify-center items-center">
-            <div className="relative shadow-xl bg-gray-900 border border-gray-800 lg:px-4 lg:py-8 px-1 py-3 lg:w-[45rem] lg:h-[24rem] w-[21rem] h-[30rem] overflow-hidden rounded-2xl ">
-              <div className="relative lg:flex justify-center items-center gap-16 lg:px-0 px-4">
+            <div className="relative shadow-xl bg-gray-900 border border-gray-800 lg:px-4 lg:py-8 px-1 py-3 lg:w-[47rem] lg:h-[24rem] w-[21rem] h-[30rem] overflow-hidden rounded-2xl ">
+              <div className="relative lg:flex justify-center items-center gap-10 lg:px-0 px-4">
                 <div>
                   <img
                     src={image}
