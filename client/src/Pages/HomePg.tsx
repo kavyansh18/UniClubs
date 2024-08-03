@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Lamp } from "../Components/UI/Lamp";
-import logouc from "../assets/logouc.png";
+import logouc from "../assets/logouc.webp";
 import "../font.css"
 
 export default function HomePg() {
@@ -27,7 +27,7 @@ export default function HomePg() {
         <p className="py-1 bg-gradient-to-r from-stone-500 to-stone-700 bg-clip-text text-transparent text-center text-6xl font-medium tracking-tight  md:text-6xl lg:relative absolute lg:bottom-0 bottom-[12rem] lg:left-0 left-[1.5rem]">
           UniClubs
         </p>
-        <p className="bg-gradient-to-br from-slate-300 to-slate-500 py-1 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent lg:text-5xl lg:mb-0 mb-20 font-odibee-sans tracking-wide">
+        <p className="bg-gradient-to-br from-slate-300 to-slate-500 py-1 bg-clip-text text-center text-4xl font-medium text-transparent lg:text-5xl lg:mb-0 mb-20 font-odibee-sans tracking-wide">
           Discover. Connect. Excel.
         </p>
       </motion.h1>
