@@ -23,6 +23,7 @@ import mlsa from '../assets/mlsa.png'
 import spike from '../assets/spike.png'
 import ad from '../assets/ad.png'
 import rc from '../assets/rc.jpeg'
+import { motion } from "framer-motion";
 
 export default function CardSpotlightDemo() {
   const [selectedItem, setSelectedItem] = useState<{
@@ -50,6 +51,15 @@ export default function CardSpotlightDemo() {
   };
   return (
     <div className="bg-gradient-to-r from-slate-500 to-slate-800 pb-10">
+      <motion.h1
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.6,
+          ease: "easeInOut",
+        }}
+      >
       <h1 className="flex justify-center items-center mb-10 pt-6 lg:text-2xl text-m text-black font-bold font-mono">
         Here are listed clubs in SRM
       </h1>
@@ -612,6 +622,7 @@ export default function CardSpotlightDemo() {
           socialLinks={selectedItem.socialLinks}
         />
       )}
+      </motion.h1>
     </div>
   );
 }
