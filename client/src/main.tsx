@@ -4,8 +4,9 @@ import "./index.css";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import HomePg from "./Pages/HomePg";
 import Clubs from "./Pages/Clubs";
+import ReactGA from 'react-ga'
 
-
+ReactGA.initialize('G-Y6X1755VPZ')
 ReactDOM.render(
   <React.StrictMode>
     <Router>
