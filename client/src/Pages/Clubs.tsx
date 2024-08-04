@@ -24,6 +24,8 @@ import spike from '../assets/spike.png'
 import ad from '../assets/ad.png'
 import rc from '../assets/rc.jpeg'
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import ReactGA from 'react-ga'
 
 export default function CardSpotlightDemo() {
   const [selectedItem, setSelectedItem] = useState<{
@@ -49,6 +51,11 @@ export default function CardSpotlightDemo() {
   const handleCloseModal = () => {
     setSelectedItem(null);
   };
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname)
+  })
+
   return (
     <div className="bg-gradient-to-r from-slate-500 to-slate-800 pb-10">
       <motion.h1

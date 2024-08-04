@@ -2,8 +2,15 @@
 import { motion } from "framer-motion";
 import { Lamp } from "../Components/UI/Lamp";
 import "../font.css"
+import { useEffect } from "react";
+import ReactGA from 'react-ga'
 
 export default function HomePg() {
+  
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname)
+  })
+
   return (
     <div>
     <Lamp>
