@@ -13,9 +13,9 @@
 }
 
 .loader {
-  width: 44.8px;
-  height: 44.8px;
-  color: #382f95;
+  width: 40px;
+  height: 40px;
+  color: #021526;
   position: relative;
   background: radial-gradient(11.2px, currentColor 94%, #0000);
 }
@@ -42,7 +42,7 @@
     radial-gradient(10.08px at top left, #0000 94%, currentColor) bottom right;
   background-size: 22.4px 22.4px;
   background-repeat: no-repeat;
-  animation: loader 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+  animation: loader 1s infinite cubic-bezier(0.3, 1, 0, 1);
 }
 
 @keyframes loader {
