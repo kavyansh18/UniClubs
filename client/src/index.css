@@ -5,15 +5,13 @@
 :root {
   --gradient-start: #64748b; /* Equivalent to slate-500 */
   --gradient-end: #1e293b; /* Equivalent to slate-800 */
-}
-
-body {
   background: linear-gradient(
     to right,
     var(--gradient-start),
     var(--gradient-end)
   );
 }
+
 .loader {
   width: 44.8px;
   height: 44.8px;
