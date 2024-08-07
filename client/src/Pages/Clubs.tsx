@@ -461,7 +461,7 @@ export default function CardSpotlightDemo() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 600);
+    }, 500);
   }, [filter]);
 
   const handleOpenModal = (item: Project) => {
