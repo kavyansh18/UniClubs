@@ -509,7 +509,7 @@ export default function CardSpotlightDemo() {
             </button>
             <button
               onClick={() => handleFilterChange("non-tech")}
-              className={`flex-1 px-4 py-2 mx-2 glass ${
+              className={`min-w-[120px] px-4 py-2 mx-2 glass ${
                 filter === "non-tech"
                   ? "bg-blue-500 text-blue-800"
                   : "bg-gray-300 text-black"
