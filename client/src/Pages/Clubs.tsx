@@ -478,11 +478,6 @@ export default function CardSpotlightDemo() {
 
   return (
     <div className="bg-gradient-to-r from-slate-500 to-slate-800 pb-10 height">
-      {loading ? (
-        <div className="loaderdiv">
-        <div className="loader"></div>
-        </div>
-      ) : (
         <div>
           <motion.h1
             initial={{ opacity: 0.0, y: 40 }}
@@ -618,7 +613,12 @@ export default function CardSpotlightDemo() {
                 </button>
               </div>
             </div>
-
+            
+            {loading ? (
+        <div className="loaderdiv">
+        <div className="loader"></div>
+        </div>
+      ) : (
             <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-10 w-full mx-auto lg:px-28">
               {filteredProjects.map((project) => (
                 <div
@@ -656,6 +656,7 @@ export default function CardSpotlightDemo() {
                 </div>
               ))}
             </div>
+            )}
 
             {selectedItem && (
               <Modal
@@ -671,7 +672,7 @@ export default function CardSpotlightDemo() {
             )}
           </motion.h1>
         </div>
-      )}
+      
     </div>
   );
 }
