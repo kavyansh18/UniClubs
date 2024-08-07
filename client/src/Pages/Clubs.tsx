@@ -16,15 +16,15 @@ import dbug from "../assets/dbugl.webp";
 import dsc from "../assets/dsc.webp";
 import dsa from "../assets/dsa.webp";
 import ar from "../assets/aarush.webp";
-import cherry from '../assets/cherry.png'
-import gen from '../assets/gen.png'
-import q from '../assets/quantumsrm_logo.jpeg'
-import cn from '../assets/cn.png'
-import sq from '../assets/sq.webp'
-import mlsa from '../assets/mlsa.png'
-import spike from '../assets/spike.png'
-import ad from '../assets/ad.png'
-import rc from '../assets/rc.jpeg'
+import cherry from "../assets/cherry.png";
+import gen from "../assets/gen.png";
+import q from "../assets/quantumsrm_logo.jpeg";
+import cn from "../assets/cn.png";
+import sq from "../assets/sq.webp";
+import mlsa from "../assets/mlsa.png";
+import spike from "../assets/spike.png";
+import ad from "../assets/ad.png";
+import rc from "../assets/rc.jpeg";
 
 interface Project {
   id: string;
@@ -93,7 +93,7 @@ const projects: Project[] = [
         link: "https://www.linkedin.com/company/blockchain-club-srm/",
       },
     ],
-    filters: ["blockchain","tech"],
+    filters: ["blockchain", "tech"],
   },
   {
     id: "developer",
@@ -108,7 +108,7 @@ const projects: Project[] = [
       { platform: "Twitter", link: "https://twitter.com/gdscsrm" },
       { platform: "LinkedIn", link: "http://www.linkedin.com/company/gdscsrm" },
     ],
-    filters: ["developer","tech"],
+    filters: ["developer", "tech"],
   },
   {
     id: "tech",
@@ -269,7 +269,10 @@ const projects: Project[] = [
     type: "Technical Club",
     website: "https://www.cherrynetwork.in/",
     socialLinks: [
-      { platform: "Instagram", link: "https://www.instagram.com/cherry.network/" },
+      {
+        platform: "Instagram",
+        link: "https://www.instagram.com/cherry.network/",
+      },
       { platform: "Twitter", link: "https://not-foundd.netlify.app/" },
       {
         platform: "LinkedIn",
@@ -285,7 +288,8 @@ const projects: Project[] = [
       "CINTEL’s NEXT-GEN AI offers a transformative journey in learning and personal growth. Our club is not just about acquiring knowledge but about preparing for the future by doing. Join us to embark on a memorable journey where learning meets action, and end with tangible success.",
     image: gen,
     type: "AI Club",
-    website: "https://www.srmist.edu.in/department/department-of-computational-intelligence/nextgen-al/",
+    website:
+      "https://www.srmist.edu.in/department/department-of-computational-intelligence/nextgen-al/",
     socialLinks: [
       { platform: "Instagram", link: "https://www.instagram.com/next_gen.ai/" },
       { platform: "Twitter", link: "https://not-foundd.netlify.app/" },
@@ -312,7 +316,7 @@ const projects: Project[] = [
         link: "https://www.linkedin.com/company/quantumsrm/",
       },
     ],
-    filters: ["tech","Quantum"],
+    filters: ["tech", "Quantum"],
   },
   {
     id: "tech",
@@ -323,7 +327,10 @@ const projects: Project[] = [
     type: "Coding Club",
     website: "https://cnwebsite22.vercel.app/",
     socialLinks: [
-      { platform: "Instagram", link: "https://www.instagram.com/coding.ninjas/?hl=en" },
+      {
+        platform: "Instagram",
+        link: "https://www.instagram.com/coding.ninjas/?hl=en",
+      },
       { platform: "Twitter", link: "https://x.com/ninjassrm" },
       {
         platform: "LinkedIn",
@@ -348,7 +355,7 @@ const projects: Project[] = [
         link: "https://www.linkedin.com/company/sq-quic/about/",
       },
     ],
-    filters: ["tech","Quantum"],
+    filters: ["tech", "Quantum"],
   },
   {
     id: "tech",
@@ -359,7 +366,10 @@ const projects: Project[] = [
     type: "Technical Club",
     website: "https://mlsasrm.in/",
     socialLinks: [
-      { platform: "Instagram", link: "https://www.instagram.com/mlsa.srm/?hl=en" },
+      {
+        platform: "Instagram",
+        link: "https://www.instagram.com/mlsa.srm/?hl=en",
+      },
       { platform: "Twitter", link: "https://x.com/mlsasrm" },
       {
         platform: "LinkedIn",
@@ -376,7 +386,8 @@ const projects: Project[] = [
       "Welcome to the Sports Club at SRM! We promote physical fitness, teamwork, and sportsmanship through a variety of activities, including basketball, soccer, tennis, and swimming. Whether you're an experienced athlete or a beginner, join us to stay active, make friends, and enjoy the thrill of competition.",
     image: spike,
     type: "Sports Club",
-    website: "https://www.srmist.edu.in/events/spikers-24-battle-of-the-champions/",
+    website:
+      "https://www.srmist.edu.in/events/spikers-24-battle-of-the-champions/",
     socialLinks: [
       { platform: "Instagram", link: "https://www.instagram.com/spikers_srm/" },
       { platform: "Twitter", link: "https://not-foundd.netlify.app/" },
@@ -416,16 +427,18 @@ const projects: Project[] = [
     type: "Robotics Club",
     website: "https://www.srmteamrobocon.com/",
     socialLinks: [
-      { platform: "Instagram", link: "https://www.instagram.com/srmteamrobocon/" },
+      {
+        platform: "Instagram",
+        link: "https://www.instagram.com/srmteamrobocon/",
+      },
       { platform: "Twitter", link: "https://not-foundd.netlify.app/" },
       {
         platform: "LinkedIn",
         link: "https://www.linkedin.com/company/srmteamrobocon/?originalSubdomain=in",
       },
     ],
-    filters: ["tech","robotics"],
+    filters: ["tech", "robotics"],
   },
-
 ];
 
 export default function CardSpotlightDemo() {
@@ -472,101 +485,131 @@ export default function CardSpotlightDemo() {
           Here are listed clubs in SRM
         </h1>
 
-        <div className="flex justify-center items-center mb-6 ">
-          <button
-            onClick={() => handleFilterChange("all")}
-            className={`px-4 py-2 mx-2 glass ${
-              filter === "all" ? "bg-blue-500 text-blue-800" : "bg-gray-300 text-black"
-            } rounded-md`}
-          >
-            All
-          </button>
-          <button
-            onClick={() => handleFilterChange("tech")}
-            className={`px-4 py-2 mx-2 glass ${
-              filter === "tech" ? "bg-blue-500 text-blue-800" : "bg-gray-300 text-black"
-            } rounded-md`}
-          >
-            Tech
-          </button>
-          <button
-            onClick={() => handleFilterChange("non-tech")}
-            className={`px-4 py-2 mx-2 glass ${
-              filter === "non-tech" ? "bg-blue-500 text-blue-800" : "bg-gray-300 text-black"
-            } rounded-md`}
-          >
-            Non-Tech
-          </button>
-          <button
-            onClick={() => handleFilterChange("blockchain")}
-            className={`px-4 py-2 mx-2 glass ${
-              filter === "blockchain" ? "bg-blue-500 text-blue-800" : "bg-gray-300 text-black"
-            } rounded-md`}
-          >
-            Blockchain
-          </button>
-          <button
-            onClick={() => handleFilterChange("developer")}
-            className={`px-4 py-2 mx-2 glass ${
-              filter === "developer" ? "bg-blue-500 text-blue-800" : "bg-gray-300 text-black"
-            } rounded-md`}
-          >
-            Developer
-          </button>
+        <div className="flex justify-start lg:justify-center items-center mb-6 overflow-x-auto custom-scrollbar px-4 lg:px-8">
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={() => handleFilterChange("all")}
+              className={`px-4 py-2 mx-2 glass ${
+                filter === "all"
+                  ? "bg-blue-500 text-blue-800"
+                  : "bg-gray-300 text-black"
+              } rounded-md`}
+            >
+              All
+            </button>
+            <button
+              onClick={() => handleFilterChange("tech")}
+              className={`px-4 py-2 mx-2 glass ${
+                filter === "tech"
+                  ? "bg-blue-500 text-blue-800"
+                  : "bg-gray-300 text-black"
+              } rounded-md`}
+            >
+              Tech
+            </button>
+            <button
+              onClick={() => handleFilterChange("non-tech")}
+              className={`flex-1 px-4 py-2 mx-2 glass ${
+                filter === "non-tech"
+                  ? "bg-blue-500 text-blue-800"
+                  : "bg-gray-300 text-black"
+              } rounded-md`}
+            >
+              Non-Tech
+            </button>
 
-          <button
-            onClick={() => handleFilterChange("cybersec")}
-            className={`px-4 py-2 mx-2 glass ${
-              filter === "cybersec" ? "bg-blue-500 text-blue-800" : "bg-gray-300 text-black"
-            } rounded-md`}
-          >
-            Cyber Security
-          </button>
-          
-          <button
-            onClick={() => handleFilterChange("research")}
-            className={`px-4 py-2 mx-2 glass ${
-              filter === "research" ? "bg-blue-500 text-blue-800" : "bg-gray-300 text-black"
-            } rounded-md`}
-          >
-            Research
-          </button>
+            <button
+              onClick={() => handleFilterChange("blockchain")}
+              className={`px-4 py-2 mx-2 glass ${
+                filter === "blockchain"
+                  ? "bg-blue-500 text-blue-800"
+                  : "bg-gray-300 text-black"
+              } rounded-md`}
+            >
+              Blockchain
+            </button>
+            <button
+              onClick={() => handleFilterChange("developer")}
+              className={`px-4 py-2 mx-2 glass ${
+                filter === "developer"
+                  ? "bg-blue-500 text-blue-800"
+                  : "bg-gray-300 text-black"
+              } rounded-md`}
+            >
+              Developer
+            </button>
 
-          <button
-            onClick={() => handleFilterChange("sports")}
-            className={`px-4 py-2 mx-2 glass ${
-              filter === "sports" ? "bg-blue-500 text-blue-800" : "bg-gray-300 text-black"
-            } rounded-md`}
-          >
-            Sports
-          </button>
+            <button
+              onClick={() => handleFilterChange("cybersec")}
+              className={`px-4 py-2 mx-2 glass ${
+                filter === "cybersec"
+                  ? "bg-blue-500 text-blue-800"
+                  : "bg-gray-300 text-black"
+              } rounded-md`}
+            >
+              CyberSecurity
+            </button>
 
-          <button
-            onClick={() => handleFilterChange("robotics")}
-            className={`px-4 py-2 mx-2 glass ${
-              filter === "robotics" ? "bg-blue-500 text-blue-800" : "bg-gray-300 text-black"
-            } rounded-md`}
-          >
-            Robotics
-          </button>
+            <button
+              onClick={() => handleFilterChange("research")}
+              className={`px-4 py-2 mx-2 glass ${
+                filter === "research"
+                  ? "bg-blue-500 text-blue-800"
+                  : "bg-gray-300 text-black"
+              } rounded-md`}
+            >
+              Research
+            </button>
 
-          <button
-            onClick={() => handleFilterChange("Quantum")}
-            className={`px-4 py-2 mx-2 glass ${
-              filter === "Quantum" ? "bg-blue-500 text-blue-800" : "bg-gray-300 text-black"
-            } rounded-md`}
-          >
-            Quantum
-          </button>
+            <button
+              onClick={() => handleFilterChange("sports")}
+              className={`px-4 py-2 mx-2 glass ${
+                filter === "sports"
+                  ? "bg-blue-500 text-blue-800"
+                  : "bg-gray-300 text-black"
+              } rounded-md`}
+            >
+              Sports
+            </button>
+
+            <button
+              onClick={() => handleFilterChange("robotics")}
+              className={`px-4 py-2 mx-2 glass ${
+                filter === "robotics"
+                  ? "bg-blue-500 text-blue-800"
+                  : "bg-gray-300 text-black"
+              } rounded-md`}
+            >
+              Robotics
+            </button>
+
+            <button
+              onClick={() => handleFilterChange("Quantum")}
+              className={`px-4 py-2 mx-2 glass ${
+                filter === "Quantum"
+                  ? "bg-blue-500 text-blue-800"
+                  : "bg-gray-300 text-black"
+              } rounded-md`}
+            >
+              Quantum
+            </button>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-10 w-full mx-auto lg:px-28">
           {filteredProjects.map((project) => (
-            <div key={project.title} className="flex justify-center items-center">
+            <div
+              key={project.title}
+              className="flex justify-center items-center"
+            >
               <CardSpotlight className="h-[22rem] w-80 rounded-3xl flex flex-col justify-center items-start">
                 <div>
                   <div>
-                    <img className="w-32 relative z-20" src={project.image} alt="" />
+                    <img
+                      className="w-32 relative z-20"
+                      src={project.image}
+                      alt=""
+                    />
                   </div>
                   <div className="text-white text-[27px] relative z-20">
                     {project.title}
@@ -592,16 +635,16 @@ export default function CardSpotlightDemo() {
         </div>
 
         {selectedItem && (
-           <Modal
-           isOpen={!!selectedItem}
-           onClose={handleCloseModal}
-           title={selectedItem.title}
-           description={selectedItem.description}
-           image={selectedItem.image}
-           type={selectedItem.type}
-           website={selectedItem.website}
-           socialLinks={selectedItem.socialLinks}
-         />
+          <Modal
+            isOpen={!!selectedItem}
+            onClose={handleCloseModal}
+            title={selectedItem.title}
+            description={selectedItem.description}
+            image={selectedItem.image}
+            type={selectedItem.type}
+            website={selectedItem.website}
+            socialLinks={selectedItem.socialLinks}
+          />
         )}
       </motion.h1>
     </div>
