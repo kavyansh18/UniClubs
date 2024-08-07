@@ -204,7 +204,7 @@ const projects: Project[] = [
         link: "https://www.linkedin.com/company/datasciencecommunitysrm",
       },
     ],
-    filters: ["tech"],
+    filters: ["tech", "datasc"],
   },
   {
     id: "tech",
@@ -461,7 +461,7 @@ export default function CardSpotlightDemo() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 650);
+    }, 600);
   }, [filter]);
 
   const handleOpenModal = (item: Project) => {
@@ -521,7 +521,7 @@ export default function CardSpotlightDemo() {
                 </button>
                 <button
                   onClick={() => handleFilterChange("non-tech")}
-                  className={`min-w-[120px] px-4 py-2 mx-2 glass ${
+                  className={`min-w-[110px] px-2 py-2 mx-2 glass ${
                     filter === "non-tech"
                       ? "bg-blue-500 text-blue-800"
                       : "bg-gray-300 text-black"
@@ -593,6 +593,17 @@ export default function CardSpotlightDemo() {
                   } rounded-md`}
                 >
                   Robotics
+                </button>
+
+                <button
+                  onClick={() => handleFilterChange("datasc")}
+                  className={`min-w-[130px] px-2 py-2 mx-2 glass ${
+                    filter === "datasc"
+                      ? "bg-blue-500 text-blue-800"
+                      : "bg-gray-300 text-black"
+                  } rounded-md`}
+                >
+                  Data Science
                 </button>
 
                 <button
