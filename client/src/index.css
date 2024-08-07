@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 :root {
-  background-color: black;
-}
+    --gradient-start: #64748b; /* Equivalent to slate-500 */
+    --gradient-end: #1e293b;   /* Equivalent to slate-800 */
+  }
+  
+  body {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  }
+  
 
 .glass {
   background: rgba(255, 255, 255, 0.15);

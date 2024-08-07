@@ -471,7 +471,7 @@ export default function CardSpotlightDemo() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-slate-500 to-slate-800 pb-10 h-full">
+    <div className="bg-gradient-to-r from-slate-500 to-slate-800 pb-10 height">
       <motion.h1
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
