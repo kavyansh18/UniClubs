@@ -3,14 +3,66 @@
 @tailwind utilities;
 
 :root {
-    --gradient-start: #64748b; /* Equivalent to slate-500 */
-    --gradient-end: #1e293b;   /* Equivalent to slate-800 */
+  --gradient-start: #64748b; /* Equivalent to slate-500 */
+  --gradient-end: #1e293b; /* Equivalent to slate-800 */
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+}
+.loader {
+  width: 44.8px;
+  height: 44.8px;
+  color: #382f95;
+  position: relative;
+  background: radial-gradient(11.2px, currentColor 94%, #0000);
+}
+.loaderdiv{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(10.08px at bottom right, #0000 94%, currentColor)
+      top left,
+    radial-gradient(10.08px at bottom left, #0000 94%, currentColor) top right,
+    radial-gradient(10.08px at top right, #0000 94%, currentColor) bottom left,
+    radial-gradient(10.08px at top left, #0000 94%, currentColor) bottom right;
+  background-size: 22.4px 22.4px;
+  background-repeat: no-repeat;
+  animation: loader 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes loader {
+  33% {
+    inset: -11.2px;
+    transform: rotate(0deg);
   }
-  
-  body {
-    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+
+  66% {
+    inset: -11.2px;
+    transform: rotate(90deg);
   }
-  
+
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
+}
 
 .glass {
   background: rgba(255, 255, 255, 0.15);
@@ -22,11 +74,11 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
-  }
-  
-  /* Hide scrollbar for Firefox */
-  .custom-scrollbar {
-    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-  }
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+/* Hide scrollbar for Firefox */
+.custom-scrollbar {
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}

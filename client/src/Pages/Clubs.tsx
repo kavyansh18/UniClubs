@@ -446,6 +446,8 @@ export default function CardSpotlightDemo() {
   const [filter, setFilter] = useState<string>("all");
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
 
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
 
@@ -456,6 +458,10 @@ export default function CardSpotlightDemo() {
         projects.filter((project) => project.filters.includes(filter))
       );
     }
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 650);
   }, [filter]);
 
   const handleOpenModal = (item: Project) => {
@@ -472,181 +478,189 @@ export default function CardSpotlightDemo() {
 
   return (
     <div className="bg-gradient-to-r from-slate-500 to-slate-800 pb-10 height">
-      <motion.h1
-        initial={{ opacity: 0.0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.2,
-          duration: 0.6,
-          ease: "easeInOut",
-        }}
-      >
-        <h1 className="flex justify-center items-center mb-5 pt-6 lg:text-2xl text-lg text-black font-bold font-mono">
-          Here are listed clubs in SRM
-        </h1>
-
-        <div className="flex justify-start lg:justify-center items-center mb-6 overflow-x-auto custom-scrollbar px-4 lg:px-8">
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={() => handleFilterChange("all")}
-              className={`px-4 py-2 mx-2 glass ${
-                filter === "all"
-                  ? "bg-blue-500 text-blue-800"
-                  : "bg-gray-300 text-black"
-              } rounded-md`}
-            >
-              All
-            </button>
-            <button
-              onClick={() => handleFilterChange("tech")}
-              className={`px-4 py-2 mx-2 glass ${
-                filter === "tech"
-                  ? "bg-blue-500 text-blue-800"
-                  : "bg-gray-300 text-black"
-              } rounded-md`}
-            >
-              Tech
-            </button>
-            <button
-              onClick={() => handleFilterChange("non-tech")}
-              className={`min-w-[120px] px-4 py-2 mx-2 glass ${
-                filter === "non-tech"
-                  ? "bg-blue-500 text-blue-800"
-                  : "bg-gray-300 text-black"
-              } rounded-md`}
-            >
-              Non-Tech
-            </button>
-
-            <button
-              onClick={() => handleFilterChange("blockchain")}
-              className={`px-4 py-2 mx-2 glass ${
-                filter === "blockchain"
-                  ? "bg-blue-500 text-blue-800"
-                  : "bg-gray-300 text-black"
-              } rounded-md`}
-            >
-              Blockchain
-            </button>
-            <button
-              onClick={() => handleFilterChange("developer")}
-              className={`px-4 py-2 mx-2 glass ${
-                filter === "developer"
-                  ? "bg-blue-500 text-blue-800"
-                  : "bg-gray-300 text-black"
-              } rounded-md`}
-            >
-              Developer
-            </button>
-
-            <button
-              onClick={() => handleFilterChange("cybersec")}
-              className={`px-4 py-2 mx-2 glass ${
-                filter === "cybersec"
-                  ? "bg-blue-500 text-blue-800"
-                  : "bg-gray-300 text-black"
-              } rounded-md`}
-            >
-              CyberSecurity
-            </button>
-
-            <button
-              onClick={() => handleFilterChange("research")}
-              className={`px-4 py-2 mx-2 glass ${
-                filter === "research"
-                  ? "bg-blue-500 text-blue-800"
-                  : "bg-gray-300 text-black"
-              } rounded-md`}
-            >
-              Research
-            </button>
-
-            <button
-              onClick={() => handleFilterChange("sports")}
-              className={`px-4 py-2 mx-2 glass ${
-                filter === "sports"
-                  ? "bg-blue-500 text-blue-800"
-                  : "bg-gray-300 text-black"
-              } rounded-md`}
-            >
-              Sports
-            </button>
-
-            <button
-              onClick={() => handleFilterChange("robotics")}
-              className={`px-4 py-2 mx-2 glass ${
-                filter === "robotics"
-                  ? "bg-blue-500 text-blue-800"
-                  : "bg-gray-300 text-black"
-              } rounded-md`}
-            >
-              Robotics
-            </button>
-
-            <button
-              onClick={() => handleFilterChange("Quantum")}
-              className={`px-4 py-2 mx-2 glass ${
-                filter === "Quantum"
-                  ? "bg-blue-500 text-blue-800"
-                  : "bg-gray-300 text-black"
-              } rounded-md`}
-            >
-              Quantum
-            </button>
-          </div>
+      {loading ? (
+        <div className="loaderdiv">
+        <div className="loader"></div>
         </div>
+      ) : (
+        <div>
+          <motion.h1
+            initial={{ opacity: 0.0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.2,
+              duration: 0.6,
+              ease: "easeInOut",
+            }}
+          >
+            <h1 className="flex justify-center items-center mb-5 pt-6 lg:text-2xl text-lg text-black font-bold font-mono">
+              Here are listed clubs in SRM
+            </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-10 w-full mx-auto lg:px-28">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.title}
-              className="flex justify-center items-center"
-            >
-              <CardSpotlight className="h-[22rem] w-80 rounded-3xl flex flex-col justify-center items-start">
-                <div>
-                  <div>
-                    <img
-                      className="w-32 relative z-20"
-                      src={project.image}
-                      alt=""
-                    />
-                  </div>
-                  <div className="text-white text-[27px] relative z-20">
-                    {project.title}
-                  </div>
-                  <div className="text-white text-xl relative z-20">
-                    {project.type}
-                  </div>
-                  <div>
-                    <button
-                      onClick={() => handleOpenModal(project)}
-                      className="relative mt-4 inline-flex items-center justify-start px-4 py-1.5 overflow-hidden font-medium transition-all bg-gradient-to-r from-slate-300 to-slate-500 rounded-3xl hover:bg-white group"
-                    >
-                      <span className="w-48 h-44 rounded rotate-[-50deg] bg-gradient-to-r from-blue-600 to-violet-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-                      <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
-                        View More
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </CardSpotlight>
+            <div className="flex justify-start lg:justify-center items-center mb-6 overflow-x-auto custom-scrollbar px-4 lg:px-8">
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => handleFilterChange("all")}
+                  className={`px-4 py-2 mx-2 glass ${
+                    filter === "all"
+                      ? "bg-blue-500 text-blue-800"
+                      : "bg-gray-300 text-black"
+                  } rounded-md`}
+                >
+                  All
+                </button>
+                <button
+                  onClick={() => handleFilterChange("tech")}
+                  className={`px-4 py-2 mx-2 glass ${
+                    filter === "tech"
+                      ? "bg-blue-500 text-blue-800"
+                      : "bg-gray-300 text-black"
+                  } rounded-md`}
+                >
+                  Tech
+                </button>
+                <button
+                  onClick={() => handleFilterChange("non-tech")}
+                  className={`min-w-[120px] px-4 py-2 mx-2 glass ${
+                    filter === "non-tech"
+                      ? "bg-blue-500 text-blue-800"
+                      : "bg-gray-300 text-black"
+                  } rounded-md`}
+                >
+                  Non-Tech
+                </button>
+
+                <button
+                  onClick={() => handleFilterChange("blockchain")}
+                  className={`px-4 py-2 mx-2 glass ${
+                    filter === "blockchain"
+                      ? "bg-blue-500 text-blue-800"
+                      : "bg-gray-300 text-black"
+                  } rounded-md`}
+                >
+                  Blockchain
+                </button>
+                <button
+                  onClick={() => handleFilterChange("developer")}
+                  className={`px-4 py-2 mx-2 glass ${
+                    filter === "developer"
+                      ? "bg-blue-500 text-blue-800"
+                      : "bg-gray-300 text-black"
+                  } rounded-md`}
+                >
+                  Developer
+                </button>
+
+                <button
+                  onClick={() => handleFilterChange("cybersec")}
+                  className={`px-4 py-2 mx-2 glass ${
+                    filter === "cybersec"
+                      ? "bg-blue-500 text-blue-800"
+                      : "bg-gray-300 text-black"
+                  } rounded-md`}
+                >
+                  CyberSecurity
+                </button>
+
+                <button
+                  onClick={() => handleFilterChange("research")}
+                  className={`px-4 py-2 mx-2 glass ${
+                    filter === "research"
+                      ? "bg-blue-500 text-blue-800"
+                      : "bg-gray-300 text-black"
+                  } rounded-md`}
+                >
+                  Research
+                </button>
+
+                <button
+                  onClick={() => handleFilterChange("sports")}
+                  className={`px-4 py-2 mx-2 glass ${
+                    filter === "sports"
+                      ? "bg-blue-500 text-blue-800"
+                      : "bg-gray-300 text-black"
+                  } rounded-md`}
+                >
+                  Sports
+                </button>
+
+                <button
+                  onClick={() => handleFilterChange("robotics")}
+                  className={`px-4 py-2 mx-2 glass ${
+                    filter === "robotics"
+                      ? "bg-blue-500 text-blue-800"
+                      : "bg-gray-300 text-black"
+                  } rounded-md`}
+                >
+                  Robotics
+                </button>
+
+                <button
+                  onClick={() => handleFilterChange("Quantum")}
+                  className={`px-4 py-2 mx-2 glass ${
+                    filter === "Quantum"
+                      ? "bg-blue-500 text-blue-800"
+                      : "bg-gray-300 text-black"
+                  } rounded-md`}
+                >
+                  Quantum
+                </button>
+              </div>
             </div>
-          ))}
-        </div>
 
-        {selectedItem && (
-          <Modal
-            isOpen={!!selectedItem}
-            onClose={handleCloseModal}
-            title={selectedItem.title}
-            description={selectedItem.description}
-            image={selectedItem.image}
-            type={selectedItem.type}
-            website={selectedItem.website}
-            socialLinks={selectedItem.socialLinks}
-          />
-        )}
-      </motion.h1>
+            <div className="grid grid-cols-1 lg:grid-cols-3 justify-center items-center gap-10 w-full mx-auto lg:px-28">
+              {filteredProjects.map((project) => (
+                <div
+                  key={project.title}
+                  className="flex justify-center items-center"
+                >
+                  <CardSpotlight className="h-[22rem] w-80 rounded-3xl flex flex-col justify-center items-start">
+                    <div>
+                      <div>
+                        <img
+                          className="w-32 relative z-20"
+                          src={project.image}
+                          alt=""
+                        />
+                      </div>
+                      <div className="text-white text-[27px] relative z-20">
+                        {project.title}
+                      </div>
+                      <div className="text-white text-xl relative z-20">
+                        {project.type}
+                      </div>
+                      <div>
+                        <button
+                          onClick={() => handleOpenModal(project)}
+                          className="relative mt-4 inline-flex items-center justify-start px-4 py-1.5 overflow-hidden font-medium transition-all bg-gradient-to-r from-slate-300 to-slate-500 rounded-3xl hover:bg-white group"
+                        >
+                          <span className="w-48 h-44 rounded rotate-[-50deg] bg-gradient-to-r from-blue-600 to-violet-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                          <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+                            View More
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </CardSpotlight>
+                </div>
+              ))}
+            </div>
+
+            {selectedItem && (
+              <Modal
+                isOpen={!!selectedItem}
+                onClose={handleCloseModal}
+                title={selectedItem.title}
+                description={selectedItem.description}
+                image={selectedItem.image}
+                type={selectedItem.type}
+                website={selectedItem.website}
+                socialLinks={selectedItem.socialLinks}
+              />
+            )}
+          </motion.h1>
+        </div>
+      )}
     </div>
   );
 }
