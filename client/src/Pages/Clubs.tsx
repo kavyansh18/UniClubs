@@ -498,7 +498,7 @@ export default function CardSpotlightDemo() {
                   onClick={() => handleFilterChange("all")}
                   className={`px-4 py-2 mx-2 glass ${
                     filter === "all"
-                      ? "bg-blue-500 text-blue-800"
+                      ? "bg-blue-500 text-blue-800 font-bold"
                       : "bg-gray-300 text-black"
                   } rounded-md`}
                 >
@@ -529,7 +529,7 @@ export default function CardSpotlightDemo() {
                   onClick={() => handleFilterChange("blockchain")}
                   className={`px-4 py-2 mx-2 glass ${
                     filter === "blockchain"
-                      ? "bg-blue-500 text-blue-800"
+                      ? "bg-blue-500 text-blue-800 font-bold"
                       : "bg-gray-300 text-black"
                   } rounded-md`}
                 >
@@ -539,7 +539,7 @@ export default function CardSpotlightDemo() {
                   onClick={() => handleFilterChange("developer")}
                   className={`px-4 py-2 mx-2 glass ${
                     filter === "developer"
-                      ? "bg-blue-500 text-blue-800"
+                      ? "bg-blue-500 text-blue-800 font-bold"
                       : "bg-gray-300 text-black"
                   } rounded-md`}
                 >
@@ -550,7 +550,7 @@ export default function CardSpotlightDemo() {
                   onClick={() => handleFilterChange("cybersec")}
                   className={`px-4 py-2 mx-2 glass ${
                     filter === "cybersec"
-                      ? "bg-blue-500 text-blue-800"
+                      ? "bg-blue-500 text-blue-800 font-bold"
                       : "bg-gray-300 text-black"
                   } rounded-md`}
                 >
@@ -561,7 +561,7 @@ export default function CardSpotlightDemo() {
                   onClick={() => handleFilterChange("research")}
                   className={`px-4 py-2 mx-2 glass ${
                     filter === "research"
-                      ? "bg-blue-500 text-blue-800"
+                      ? "bg-blue-500 text-blue-800 font-bold"
                       : "bg-gray-300 text-black"
                   } rounded-md`}
                 >
@@ -572,7 +572,7 @@ export default function CardSpotlightDemo() {
                   onClick={() => handleFilterChange("sports")}
                   className={`px-4 py-2 mx-2 glass ${
                     filter === "sports"
-                      ? "bg-blue-500 text-blue-800"
+                      ? "bg-blue-500 text-blue-800 font-bold"
                       : "bg-gray-300 text-black"
                   } rounded-md`}
                 >
@@ -583,7 +583,7 @@ export default function CardSpotlightDemo() {
                   onClick={() => handleFilterChange("robotics")}
                   className={`px-4 py-2 mx-2 glass ${
                     filter === "robotics"
-                      ? "bg-blue-500 text-blue-800"
+                      ? "bg-blue-500 text-blue-800 font-bold"
                       : "bg-gray-300 text-black"
                   } rounded-md`}
                 >
@@ -594,7 +594,7 @@ export default function CardSpotlightDemo() {
                   onClick={() => handleFilterChange("datasc")}
                   className={`min-w-[130px] px-2 py-2 mx-2 glass ${
                     filter === "datasc"
-                      ? "bg-blue-500 text-blue-800"
+                      ? "bg-blue-500 text-blue-800 font-bold"
                       : "bg-gray-300 text-black"
                   } rounded-md`}
                 >
@@ -605,7 +605,7 @@ export default function CardSpotlightDemo() {
                   onClick={() => handleFilterChange("Quantum")}
                   className={`px-4 py-2 mx-2 glass ${
                     filter === "Quantum"
-                      ? "bg-blue-500 text-blue-800"
+                      ? "bg-blue-500 text-blue-800 font-bold"
                       : "bg-gray-300 text-black"
                   } rounded-md`}
                 >
