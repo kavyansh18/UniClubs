@@ -27,7 +27,7 @@ We welcome contributions! If you have ideas or improvements, feel free to fork t
 
 If you have any questions or suggestions, feel free to reach out:
 
-- **Email**: [youremail@example.com](mailto:kavyansh2027.com)
+- **Email**: [kavyansh2027@gmail.com](mailto:kavyansh2027.com)
 ---
 
 🌟 **UniClubs** - Connecting students with opportunities! 🌟
